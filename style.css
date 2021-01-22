@@ -1,0 +1,21 @@
+body{
+    display:flex;
+    flex-direction: column;
+    background-image: url("https://prohucon.es/wp-content/uploads/2019/06/Corcho-aislante-para-humedad.jpg");
+    background-repeat:repeat;
+    height: 100vh;
+}
+
+.card{
+    background-color: #ffdf0a;
+}
+.writable{
+    background-color: #fff8cd9f;
+    border: none;
+    caret-color: brown;
+}
+
+.jumbotron{
+    background: rgb(255,223,10);
+background: linear-gradient(180deg, #ffdf0a 0%, rgba(255,255,255,0) 100%);
+}
