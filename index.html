@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"   integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="      crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="notas.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+   
+    <title>Notas</title>
+  </head>
+  <body>
+  <div class="text-center">
+        <img src="notas.png" alt="NOTAS" style="width: 40vw;">
+    </div>
+    <div class="container w-50">
+        <div class="card">
+            <form class="p-2" id="formNote">
+              <div class="text-center">
+                <h4>Añadir nota</h4> 
+              </div>
+                <div class="form-group col-auto">
+                    <label class="form-label" for="title">Título</label>
+                    <input class="col form-input writable" type="text" id="title" maxlength="80">
+                </div>
+                <div class="form-group col-auto">
+                    <label class="form-label" for="text">Nota</label>
+                    <textarea class="form-text w-100  writable" id="text" maxlength="200" > </textarea> 
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-warning align-self-center">Agregar</button>
+                </div>
+            </form>
+            <div class="form-group  text-center p-2 my-4" >
+              <h4>Buscar nota</h4>
+              <form id="searchForm">
+                <input type="text" class="writable w-80" id="search">
+                <button class="btn btn-info " type="submit">Buscar</button>
+                <button class="btn btn-info " type="button" onclick="clearSearch()">Limpiar</button>
+              </form>
+            </div>
+        </div>
+    </div>
+    <div class="container row  w-80 m-auto">
+        <ul  id="foundArea" >
+
+        </ul>
+    </div>
+    <div class="container row  w-80 m-auto" id="cardsArea">
+        
+    </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar nota</h5>
+        </div>
+        <div class="modal-body">
+            <form class="p-2" id="formEdit">
+                <div class="form-group col-auto">
+                    <label class="form-label col " for="noteTitle">Título</label>
+                    <input class="col" type="text"  maxlength="50" id="noteTitle">
+                </div>
+                <div class="form-group col-auto">
+                    <label class="form-label col" for="noteText">Nota</label>
+                    <textarea class="form-text w-100" maxlength="200" id="noteText"> </textarea> 
+                </div>
+                <div  class="form-group col-auto" id="editButtons">
+
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+
+  </body>
+</html>
